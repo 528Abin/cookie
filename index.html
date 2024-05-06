@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+
+        /* 基本重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 页面整体布局 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* 输入框和按钮样式 */
+        #cookieInfo input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            /* 确保padding不会增加宽度 */
+        }
+
+        #cookieInfo button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #5cb85c;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        #cookieInfo button:hover {
+            background-color: #4cae4c;
+        }
+
+        /* 用户名显示样式 */
+        #usernameDisplay {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #5cb85c;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cookies Demo, I am Grylls</h1>
+        <div id="cookieInfo">
+            <label for="usernameInput">Enter Your Name:</label>
+            <input type="text" id="usernameInput" placeholder="John Doe">
+            <button onclick="setUsername()">Set Username</button>
+            <button onclick="getUsername()">Get Username</button>
+            <button onclick="deleteUsername()">Delete Username</button>
+            <p id="usernameDisplay"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
